@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light mint theme inspired by the provided screenshot.
+   All colors are HSL so they remain compatible with the existing Tailwind tokens. */
+
+@layer base {
+  :root {
+    /* Page background: very light mint */
+    --background: 150 30% 96%; /* soft mint, near-white */
+    /* Primary text: deep navy for good contrast */
+    --foreground: 217 25% 12%;
+
+    /* Card background and text */
+    --card: 0 0% 100%; /* white cards */
+    --card-foreground: 217 25% 12%;
+
+    /* Popovers match cards */
+    --popover: 0 0% 100%;
+    --popover-foreground: 217 25% 12%;
+
+    /* Primary color: deep navy used for primary actions (buttons) */
+    --primary: 217 60% 16%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: light mint pill color for tags */
+    --secondary: 150 40% 92%;
+    --secondary-foreground: 150 40% 26%;
+
+    /* Muted text (subtle labels) */
+    --muted: 210 20% 60%;
+    --muted-foreground: 210 12% 45%;
+
+    /* Accent: for small accents and outlines (slightly darker mint) */
+    --accent: 150 34% 85%;
+    --accent-foreground: 217 25% 12%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 96%;
+    --ring: 217 15% 30%;
+
+    /* Custom theme colors used across components */
+    --justice-gold: 45 93% 58%; /* kept for highlights */
+    --trust-blue: 217 92% 24%; /* deep blue accent */
+    --empowerment-green: 150 38% 86%; /* pill/light-green token */
+    --chat-user: 217 91% 60%;
+    --chat-assistant: 215 27% 32%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--trust-blue)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--justice-gold)), hsl(45 93% 65%));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(210 40% 98%));
+
+    /* Shadows and subtle glow */
+    --shadow-legal: 0 8px 24px -8px hsl(var(--foreground) / 0.06);
+    --shadow-glow: 0 0 30px hsl(var(--justice-gold) / 0.07);
+
+    --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.6rem;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 217 14% 14%;
+    --sidebar-primary: 217 60% 16%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 150 36% 90%;
+    --sidebar-accent-foreground: 217 14% 14%;
+    --sidebar-border: 210 20% 92%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* keep a dark class override for users who enable dark mode */
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

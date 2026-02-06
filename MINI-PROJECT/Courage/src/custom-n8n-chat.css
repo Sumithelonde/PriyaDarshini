@@ -1,0 +1,221 @@
+/* Modern gradient background for hero section */
+.hero-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border-radius: 24px !important;
+  padding: 3rem !important;
+}
+
+/* Feature Cards - Modern design */
+.feature-card {
+  background: #1a202c !important;
+  border-radius: 16px !important;
+  padding: 2rem !important;
+  transition: all 0.3s ease !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25) !important;
+  border-color: #667eea !important;
+}
+
+/* Get Started button - Modern gradient */
+.button { 
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important; 
+  padding: 0.875rem 1.75rem !important; 
+  border-radius: 12px !important; 
+  transition: all 0.3s ease !important;
+  font-weight: 600 !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3) !important;
+} 
+ 
+.button:hover { 
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4) !important;
+} 
+
+.button:active {
+  transform: translateY(0) !important;
+}
+ 
+/* Logo customization */
+.n8n-chat-header img { 
+  width: 36px !important; 
+  height: 36px !important; 
+  object-fit: contain !important;
+  filter: brightness(1.1) !important;
+} 
+ 
+/* Main content wrapper */
+.main-content-wrapper { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  width: 100%; 
+  margin: 0 auto; 
+  padding: 0 1.5rem; 
+  max-width: 1400px;
+} 
+ 
+/* Cards container - Better spacing */
+.cards-container { 
+  display: flex; 
+  justify-content: center; 
+  align-items: stretch; 
+  gap: 1.5rem; 
+  flex-wrap: wrap;
+  margin-top: 2rem;
+} 
+ 
+/* Chat window toggle button - Modern floating style */
+.chat-window-toggle { 
+  position: fixed; 
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000; 
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border-radius: 50% !important;  
+  padding: 16px !important;
+  cursor: pointer; 
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4) !important;
+  transition: all 0.3s ease !important;
+  border: none !important;
+  width: 60px !important;
+  height: 60px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+} 
+ 
+.chat-window-toggle:hover { 
+  transform: scale(1.1) translateY(-2px) !important;
+  box-shadow: 0 6px 24px rgba(102, 126, 234, 0.5) !important;
+} 
+
+.chat-window-toggle:active {
+  transform: scale(1.05) !important;
+}
+
+/* Language selector - Modern style */
+select, .language-selector {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 8px !important;
+  padding: 0.5rem 1rem !important;
+  transition: all 0.3s ease !important;
+}
+
+select:hover, .language-selector:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* Icon styling */
+.feature-card svg, .feature-card i {
+  color: #667eea !important;
+  filter: drop-shadow(0 2px 4px rgba(102, 126, 234, 0.3)) !important;
+}
+
+/* Scrollbar styling */
+.n8n-chat-widget ::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+.n8n-chat-widget ::-webkit-scrollbar-track {
+  background: #f1f5f9 !important;
+  border-radius: 10px !important;
+}
+
+.n8n-chat-widget ::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border-radius: 10px !important;
+}
+
+.n8n-chat-widget ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%) !important;
+}
+
+/* Chat widget customization */
+.n8n-chat-widget {
+  border-radius: 12px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.n8n-chat-header {
+  background: #0A192F !important;
+  padding: 1.25rem !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.n8n-chat-header-title {
+  color: #F8F8F8 !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+}
+
+.n8n-chat-message-bot {
+  background: #233554 !important;
+  color: #F8F8F8 !important;
+  border-radius: 12px 12px 12px 0 !important;
+  padding: 12px 16px !important;
+}
+
+.n8n-chat-message-user {
+  background: #0A192F !important;
+  color: #F8F8F8 !important;
+  border-radius: 12px 12px 0 12px !important;
+}
+
+.n8n-chat-input-container {
+  background: #172A46 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding: 1rem !important;
+}
+
+.n8n-chat-input {
+  background: #1E3A5F !important;
+  color: #F8F8F8 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+}
+
+.n8n-chat-input::placeholder {
+  color: #A8B2D1 !important;
+}
+
+/* Send button */
+.n8n-chat-send-button {
+  background: #0A192F !important;
+  color: #F8F8F8 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .feature-card {
+    width: 100% !important;
+  }
+  
+  .flex.flex-col.h-[600px] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .chat-window-toggle {
+    bottom: 16px !important;
+    right: 16px !important;
+    width: 56px !important;
+    height: 56px !important;
+  }
+}
+
+/* Typing indicator */
+.bg-muted.rounded-lg {
+  background: #f5f5f5 !important;
+  border-radius: 16px !important;
+  padding: 0.5rem 1rem !important;
+}

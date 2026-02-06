@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NGO Chat</title>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        background: #f6f7f9;
+        color: #0f172a;
+      }
+      header {
+        background: #153243;
+        color: #f8fafc;
+        padding: 16px 20px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .card {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+        overflow: hidden;
+      }
+      .meta {
+        padding: 16px 20px;
+        border-bottom: 1px solid #e5e7eb;
+        font-size: 14px;
+        color: #475569;
+      }
+      .frame-wrap {
+        height: calc(100vh - 180px);
+      }
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+      .fallback {
+        padding: 20px;
+      }
+      .fallback a {
+        color: #2563eb;
+        text-decoration: none;
+      }
+      .fallback a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>NGO Chat</header>
+    <main>
+      <div class="card">
+        <div class="meta" id="ngo-meta">Chatting with NGO</div>
+        <div class="frame-wrap">
+          <iframe id="chat-frame" title="NGO Chat"></iframe>
+        </div>
+        <div class="fallback">
+          If the chat does not load, open it directly: <a id="chat-link" target="_blank" rel="noopener noreferrer">Open Chat</a>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const ngo = params.get('ngo') || 'NGO';
+      const meta = document.getElementById('ngo-meta');
+      meta.textContent = `Chatting with ${ngo}`;
+
+      const baseUrl = 'https://shravan-sapate09.app.n8n.cloud/webhook/86816cfb-edb3-41c2-a959-b5c72a110eb6/chat';
+      const chatUrl = `${baseUrl}?ngo=${encodeURIComponent(ngo)}`;
+
+      const frame = document.getElementById('chat-frame');
+      frame.src = chatUrl;
+
+      const link = document.getElementById('chat-link');
+      link.href = chatUrl;
+    </script>
+  </body>
+</html>
